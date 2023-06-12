@@ -72,7 +72,7 @@ function Header({placeholder}) {
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             type="text"
-            className="bg-white p-2 h-full w-8/12 flex-grow flex-shrink focus:outline-none px-4 text-center placeholder-gray-400"
+            className=" text-sm  bg-white p-2 h-full w-8/12 flex-grow flex-shrink focus:outline-none px-4 text-center placeholder-gray-400"
             placeholder={placeholder || "Start your search"} 
           />
 

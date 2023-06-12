@@ -2,35 +2,68 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { useRouter } from "next/router";
 import React from "react";
-import {format} from 'date-fns'
+import { format } from "date-fns";
+import InfoCard from "@/components/InfoCard";
+import info_data from "@/components/info_data";
 
-export default function Search() {
-    const router = useRouter();
-    const {location, startDate, endDate, noOfGuests} =  router.query;
+export default function Search({ searchResults }) {
+  const router = useRouter();
+  const { location, startDate, endDate, noOfGuests } = router.query;
 
-    const formattedStartDate = format(new Date(startDate), "dd MMMM yy")
-    const formattedEndDate = format(new Date(endDate), "dd MMMM yy")
-    const range = `${formattedStartDate} - ${formattedEndDate}`
+  const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
+  const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
+  const range = `${formattedStartDate} - ${formattedEndDate}`;
   return (
     <div className>
-      <Header placeholder= {`${location} | ${range} | ${noOfGuests}`}/>
+      <Header placeholder={`${location} | ${range} | ${noOfGuests}`} />
       <main className="flex">
         <section className="flex-grow pt-10 px-6">
-            <p className='text-xs'>300+ Stays - {range} - for {noOfGuests} Guests</p>
+          <p className="text-xs">
+            300+ Stays - {range} - for {noOfGuests} Guests
+          </p>
 
-            <h1 className="text-3xl font-semibold mt-2 mb-6 ">Stays in {location}</h1>
+          <h1 className="text-3xl font-semibold mt-2 mb-6 ">
+            Stays in {location}
+          </h1>
 
-            <div className='hidden lg:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap'>
-                <p className="button_">Cancellation Flexibility</p>
-                <p className="button_"> Type of Place </p>
-                <p className="button_">Price</p>
-                <p className="button_">Rooms and Beds</p>
-                <p className="button_">More Filters</p>
+          <div className="hidden lg:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap">
+            <p className="button_">Cancellation Flexibility</p>
+            <p className="button_"> Type of Place </p>
+            <p className="button_">Price</p>
+            <p className="button_">Rooms and Beds</p>
+            <p className="button_">More Filters</p>
+          </div>
+
+            <div className="flex flex-col">
+          {info_data &&
+            info_data.map(
+              ({ img, location, title, description, star, price, total }) => (
+                <InfoCard
+                key = {img}
+                  img={img}
+                  location={location}
+                  title={title}
+                  description={description}
+                  star={star}
+                  price={price}
+                  total={total}
+                />
+              )
+            )}
             </div>
         </section>
-
       </main>
       <Footer />
     </div>
   );
 }
+// export async function getServerSideProps() {
+//   const res = await fetch("https://links.papareact.com/isz");
+//   const searchResults = await res.json();
+
+//   return {
+//     props: {
+//       searchResults,
+//     },
+//   };
+// }
