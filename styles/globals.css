@@ -43,5 +43,11 @@ textarea {
   @apply my-3 rounded-lg bg-green-100 p-3 text-green-700;
 }
 
+.button_ {
+  @apply px-4 py-2 shadow-lg border rounded-full cursor-pointer hover:shadow-lg  active:scale-95 active:bg-blue-100 transition transform duration-100 ease-out;
+}
+
+
+
 
 }

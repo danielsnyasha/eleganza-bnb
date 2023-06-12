@@ -10,25 +10,36 @@ import {
  
 } from "@heroicons/react/outline";
 import {UsersIcon} from "@heroicons/react/solid";
-
-
-
-
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-function Header() {
+function Header({placeholder}) {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [noOfGuests, setNoOfGuests] = useState(1)
+
+
 
   const selectionRange = {
     startDate: startDate,
     endDate: endDate,
     key: "selection",
   };
+
+  const search = () => {
+    router.push({
+      pathname: '/search',
+      query: {
+        location: searchInput,
+        startDate: startDate.toISOString(),
+        endDate: endDate.toISOString(),
+        noOfGuests,
+      },
+
+    })
+  }
 
   const handleSelect = (ranges) => {
     setStartDate(ranges.selection.startDate);
@@ -45,7 +56,7 @@ function Header() {
     <header className="sticky top-0 z-50 shadow-md">
       {/* Top Nav */}
       <div className=" items-center bg-amazon_blue p-1 flex-grow py-2 grid grid-cols-3">
-        <div className="mt-0 mr-2 flex items-center flex-grow sm:flex-grow-0">
+        <div onClick={()=>router.push('/')} className="mt-0 mr-2 flex items-center flex-grow sm:flex-grow-0">
           <Image
             src="/eleganza.jpg"
             alt=""
@@ -62,7 +73,7 @@ function Header() {
             onChange={(e) => setSearchInput(e.target.value)}
             type="text"
             className="bg-white p-2 h-full w-8/12 flex-grow flex-shrink focus:outline-none px-4 text-center placeholder-gray-400"
-            placeholder="Search"
+            placeholder={placeholder || "Start your search"} 
           />
 
           <div className="flex items-center justify-center h-full w-10 sm:w-12">
@@ -133,7 +144,7 @@ function Header() {
                 </div>
                 <div className="flex space-x-5 py-2">
                   <button onClick={resetInput}  className="w-15 rounded-md bg-blue-400 px-5 shadow-md text-gray-700">Cancel</button>
-                  <button className="w-15 px-5 rounded-md border-yellow-200 bg-gray-300 hover:scale-90 hover:font-bold hover:text-green-600 shadow-md text-red-400">Search</button>
+                  <button onClick={search} className="w-15 px-5 rounded-md border-yellow-200 bg-gray-300 hover:scale-90 hover:font-bold hover:text-green-600 shadow-md text-red-400">Search</button>
 
                 </div>
                 
