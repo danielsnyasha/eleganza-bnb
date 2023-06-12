@@ -7,7 +7,7 @@ function Banner() {
   return (
     <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]">
       <Image
-      src='https://cdn.pixabay.com/photo/2016/08/11/23/48/mountains-1587287_1280.jpg'
+      src='/mountains.jpg'
       layout='fill'
       objectFit="cover"
       loading="eager"

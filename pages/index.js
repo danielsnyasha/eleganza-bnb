@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function Home({ data }) {
   return (
-    <div className="bg-white h-screen">
+    <div className="bg-white">
       <Head>
         <title>Eleganza Shop</title>
       </Head>
@@ -57,7 +57,7 @@ export default function Home({ data }) {
         </section>
 
         <LargeCard
-        img='https:links.papareact.com/4cj'
+        img='/image_banner.webp'
         title='The Greatest Outdoors'/>
 
         {/* ProductFeed */}
