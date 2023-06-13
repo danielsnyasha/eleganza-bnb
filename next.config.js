@@ -12,4 +12,7 @@ module.exports = {
     path: '/_next/image',
     quality: 90, // Increase the quality value to maintain better image quality
   },
+  env:{
+    mapbox_key:'pk.eyJ1IjoiZGFuaWVsc255YXNoYSIsImEiOiJjbDNlNTlncnowOHExM2pwNmRzYXpoemY2In0.wG33nAXsCYCgemlQCWZK5w'
+  }
 };

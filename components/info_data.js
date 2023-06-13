@@ -1,7 +1,7 @@
 const info_data = [
   {
     img: "https://links.papareact.com/xqj",
-    location: "Private room in center of London",
+    location: "Spacious and Luxurious",
     title: "Stay at this spacious Edwardian House",
     description:
       "1 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen · Free parking · Washing Machine",
@@ -13,7 +13,7 @@ const info_data = [
   },
   {
     img: "https://links.papareact.com/hz2",
-    location: "Private room in center of London",
+    location: "Classy and Trendy",
     title: "Independant luxury studio apartment",
     description:
       "2 guest · 3 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen",
@@ -25,7 +25,7 @@ const info_data = [
   },
   {
     img: "https://links.papareact.com/uz7",
-    location: "Private room in center of London",
+    location: "You need a private place?",
     title: "London Studio Apartments",
     description:
       "4 guest · 4 bedroom · 4 bed · 2 bathrooms · Free parking · Washing Machine",
@@ -37,7 +37,7 @@ const info_data = [
   },
   {
     img: "https://links.papareact.com/6as",
-    location: "Private room in center of London",
+    location: "Class is permanent",
     title: "30 mins to Oxford Street, Excel London",
     description:
       "1 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen · Free parking · Washing Machine",
@@ -49,7 +49,7 @@ const info_data = [
   },
   {
     img: "https://links.papareact.com/xhc",
-    location: "Private room in center of London",
+    location: "Exactly what you envisioned",
     title: "Spacious Peaceful Modern Bedroom",
     description:
       "3 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Free parking · Dry Cleaning",
@@ -61,7 +61,7 @@ const info_data = [
   },
   {
     img: "https://links.papareact.com/pro",
-    location: "Private room in center of London",
+    location: "Wishes can come true",
     title: "The Blue Room In London",
     description:
       "2 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Washing Machine",
@@ -73,7 +73,7 @@ const info_data = [
   },
   {
     img: "https://links.papareact.com/8w2",
-    location: "Private room in center of London",
+    location: "Making your dreams come true",
     title: "5 Star Luxury Apartment",
     description:
       "3 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen · Free parking · Washing Machine",

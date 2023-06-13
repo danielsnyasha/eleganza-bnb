@@ -5,6 +5,8 @@ import React from "react";
 import { format } from "date-fns";
 import InfoCard from "@/components/InfoCard";
 import info_data from "@/components/info_data";
+import Map from "@/components/Map";
+import ReactMapGL from 'react-map-gl';
 
 export default function Search({ searchResults }) {
   const router = useRouter();
@@ -52,7 +54,12 @@ export default function Search({ searchResults }) {
             )}
             </div>
         </section>
+        <section className="hidden xl:inline-flex md:min-w-[600px]">
+            <Map info_data={info_data}/>
+        </section>
       </main>
+
+
       <Footer />
     </div>
   );
